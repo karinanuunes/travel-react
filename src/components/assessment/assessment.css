@@ -1,10 +1,9 @@
 .assessment {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-items: first baseline;
   padding: 50px 0;
-  gap: 100px;
+  gap: 20px;
 }
 
 .assessment-each {
@@ -12,10 +11,11 @@
   flex-wrap: wrap;
   flex-direction: row-reverse;
   gap: 10px;
-  max-width: 400px;
+  max-width: 700px;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 2px #00000033;
+  background-color: #ffffff;
 }
 
 .person {
@@ -33,4 +33,9 @@
 
 .person p {
   font-size: 12px;
+}
+
+.assessment-general {
+  display: flex;
+  align-items: center;
 }
