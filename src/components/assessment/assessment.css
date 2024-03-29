@@ -1,0 +1,36 @@
+.assessment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: first baseline;
+  padding: 50px 0;
+  gap: 100px;
+}
+
+.assessment-each {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  gap: 10px;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px #00000033;
+}
+
+.person {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.person-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.person p {
+  font-size: 12px;
+}

@@ -4,6 +4,7 @@ import "./components/button/button.css";
 import Category from "./components/category/category";
 import Destination from "./components/destination/destination";
 import Book from "./components/book/book";
+import Assessment from "./components/assessment/assessment";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Category />
       <Destination />
       <Book />
+      <Assessment />
     </>
   );
 }
