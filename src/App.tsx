@@ -3,6 +3,7 @@ import "./App.css";
 import "./components/button/button.css";
 import Category from "./components/category/category";
 import Destination from "./components/destination/destination";
+import Book from "./components/book/book";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Category />
       <Destination />
+      <Book />
     </>
   );
 }
