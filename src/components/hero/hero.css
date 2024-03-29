@@ -39,3 +39,9 @@
 .hero-destiny button {
   margin-right: 10px;
 }
+
+@media (max-width: 950px) {
+  .hero-content img {
+    display: none;
+  }
+}
