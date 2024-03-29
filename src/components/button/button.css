@@ -3,7 +3,7 @@ a {
   color: #181e4b;
 }
 
-button {
+.classic-button {
   border: 1px solid #181e4b;
   color: #181e4b;
   font-size: 14px;
@@ -13,7 +13,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.classic-button:hover {
   background-color: #181e4b;
   color: #ffffff;
   transition: 0.3s ease-in;
@@ -30,4 +30,18 @@ button:hover {
 .hero-button:hover {
   background-color: #a70d15;
   border: #a70d15;
+}
+
+.arrow-button {
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 5px 20px;
+}
+
+.arrow-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

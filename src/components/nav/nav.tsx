@@ -13,7 +13,7 @@ const Nav = () => {
           <a href="/">Voôs</a>
           <a href="/">Bookings</a>
           <a href="/">Entrar</a>
-          <button>Registre-se</button>
+          <button className="classic-button">Registre-se</button>
         </div>
       </div>
     </nav>

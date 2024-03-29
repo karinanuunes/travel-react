@@ -16,7 +16,9 @@ const Hero = () => {
             jornada hoje mesmo!
           </p>
           <div className="hero-destiny">
-            <button className="hero-button">Descubra novos destinos</button>
+            <button className="classic-button hero-button">
+              Descubra novos destinos
+            </button>
             <a href="/">Vá direto ao ponto</a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
