@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #181e4b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../public/planodefundo.png);
+  background-size: cover;
+}
+
+@media (max-width: 1060px) {
+  #root {
+    align-items: normal;
+  }
+}

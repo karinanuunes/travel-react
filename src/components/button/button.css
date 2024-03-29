@@ -1,0 +1,33 @@
+a {
+  font-size: 14px;
+  color: #181e4b;
+}
+
+button {
+  border: 1px solid #181e4b;
+  color: #181e4b;
+  font-size: 14px;
+  background-color: transparent;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #181e4b;
+  color: #ffffff;
+  transition: 0.3s ease-in;
+  /* opacity: 0.5; */
+}
+
+.hero-button {
+  background-color: #d30f19;
+  border: #d30f19;
+  color: #ffffff;
+  width: fit-content;
+}
+
+.hero-button:hover {
+  background-color: #a70d15;
+  border: #a70d15;
+}

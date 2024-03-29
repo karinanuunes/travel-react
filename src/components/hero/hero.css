@@ -1,0 +1,41 @@
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1160px;
+  padding: 0 50px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 530px;
+  padding-right: 50px;
+  gap: 14px;
+}
+
+.hero-uptitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d30f19;
+}
+
+.hero-title {
+  font-size: 60px;
+  font-weight: 800;
+  /* background-image: url("https://img.freepik.com/fotos-premium/curso-de-tinta-vermelha-brilhante_23-2147746838.jpg?w=360"); */
+  background-repeat: no-repeat;
+}
+
+.hero-image {
+  width: 430px;
+}
+
+.hero-destiny {
+  display: flex;
+  align-items: center;
+}
+
+.hero-destiny button {
+  margin-right: 10px;
+}
