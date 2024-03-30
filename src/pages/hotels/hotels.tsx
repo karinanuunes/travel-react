@@ -2,10 +2,13 @@ import "./hotels.css";
 import Nav from "../../components/nav/nav";
 import places from "../../places.json";
 import { useState } from "react";
+import Destiny from "../../components/destiny/destiny";
+import fotoHotel from "../../../public/hotel.jpg";
 
 const Hotels = () => {
   const [paisSelecionado, setPais] = useState("");
   const [cidadeSelecionada, setCidade] = useState("");
+  const [hoteisSelecionados, setHoteisSelecionados] = useState<string[]>([]);
 
   const handlePais = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const paisSelecionado = event.target.value;
@@ -21,12 +24,14 @@ const Hotels = () => {
 
   const onSubmit = () => {
     event?.preventDefault();
-    cidadeSelecionada &&
-      places.forEach((place) => {
-        if (place.cidades.includes(cidadeSelecionada)) {
-          place.hoteis[cidadeSelecionada].map((hotel) => console.log(hotel));
-        }
-      });
+    const hoteisEncontrados: string[] = [];
+    places.forEach((place) => {
+      if (place.cidades.includes(cidadeSelecionada)) {
+        const hoteisCidadeSelecionada = place.hoteis[cidadeSelecionada];
+        hoteisEncontrados.push(...hoteisCidadeSelecionada);
+      }
+    });
+    setHoteisSelecionados(hoteisEncontrados);
   };
 
   return (
@@ -35,12 +40,7 @@ const Hotels = () => {
       <div className="hoteis">
         <h1>Hotéis, pousadas e resorts</h1>
         <div className="area-hoteis">
-          <form onSubmit={onSubmit}>
-            <input
-              type="text"
-              placeholder="Para onde você vai?"
-              className="hotel-input"
-            />
+          <form onSubmit={onSubmit} className="area-form">
             <select
               name="pais"
               id="pais"
@@ -79,6 +79,18 @@ const Hotels = () => {
               Buscar Hotéis
             </button>
           </form>
+          <div className="area-escolha-hotel">
+            {hoteisSelecionados.map((hotel, index) => (
+              <Destiny
+                key={index}
+                src={fotoHotel}
+                alt={hotel}
+                title={hotel}
+                price={2000}
+                days={6}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
