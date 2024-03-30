@@ -9,7 +9,7 @@
   justify-content: space-between;
   text-align: center;
   gap: 8px;
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
   transition: 0.2s ease-in-out;
 }
 
