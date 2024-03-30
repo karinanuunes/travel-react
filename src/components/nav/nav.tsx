@@ -9,7 +9,7 @@ const Nav = () => {
         </div>
         <div className="nav-links">
           <a href="/">Destinos</a>
-          <a href="/">Hotéis</a>
+          <a href="/hoteis">Hotéis</a>
           <a href="/">Voôs</a>
           <a href="/">Bookings</a>
           <a href="/">Entrar</a>

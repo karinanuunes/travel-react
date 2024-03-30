@@ -1,0 +1,27 @@
+.hotel {
+  width: 1060px;
+}
+
+.hoteis {
+  margin: 50px;
+}
+
+.area-hoteis {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.hotel-input {
+  width: 200px;
+  padding: 15px 10px;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  color: #181e4b;
+}
+
+.hotel-input:hover,
+.hotel-input:focus {
+  outline: 0;
+}
