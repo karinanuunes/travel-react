@@ -62,14 +62,14 @@ const Footer = () => {
             </button>
           </div>
           <h4>Conheça nosso app</h4>
-          <button>
+          <button className="basic-button">
             <img
               src={applestore}
               alt="Logo da Apple Store"
               className="app-logo"
             />
           </button>
-          <button>
+          <button className="basic-button">
             <img
               src={googleplay}
               alt="Logo da Google Play"
