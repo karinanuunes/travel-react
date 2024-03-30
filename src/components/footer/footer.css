@@ -1,0 +1,34 @@
+footer {
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.footer-exploratio,
+.footer-companhia,
+.footer-contato,
+.footer-mais,
+.footer-redes {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 30px;
+  gap: 20px;
+  max-width: 200px;
+}
+
+.footer-redes {
+  text-align: center;
+}
+
+.footer-redes-sociais {
+  flex-direction: row;
+}
+
+.app-logo {
+  width: 100px;
+}
