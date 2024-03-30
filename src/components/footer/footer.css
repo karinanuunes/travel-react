@@ -4,8 +4,10 @@ footer {
 
 .footer {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-direction: row; */
+  margin: 50px 0 20px 0;
 }
 
 .footer-exploratio,

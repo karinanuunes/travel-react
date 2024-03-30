@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px 0;
+  margin: 30px;
   padding: 60px 100px;
   gap: 50px;
   background: linear-gradient(-0.2turn, #f2f4f8, #e6e8f1, #e6e8f1, #f2f4f8);
@@ -52,4 +52,19 @@
 
 .email-input-box {
   display: flex;
+}
+
+@media (max-width: 525px) {
+  .subscribe {
+    padding: 30px 50px;
+  }
+
+  .email-box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .email-input {
+    width: 200px;
+  }
 }
