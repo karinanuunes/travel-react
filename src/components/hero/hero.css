@@ -41,6 +41,10 @@
 }
 
 @media (max-width: 950px) {
+  .hero-content {
+    justify-content: center;
+  }
+
   .hero-content img {
     display: none;
   }

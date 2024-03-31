@@ -6,8 +6,8 @@
   padding: 24px;
 }
 
-.nav-heading {
-  margin-right: 100px;
+.nav-heading h2 {
+  font-size: 28px;
 }
 
 .nav-links {
@@ -21,14 +21,6 @@
   .nav-bar {
     justify-content: center;
   }
-
-  .nav-heading {
-    margin: 0;
-  }
-
-  /* .nav-heading {
-    margin-right: 50px;
-  } */
 
   .nav-links {
     flex-wrap: wrap;
