@@ -84,8 +84,12 @@ const Hotels = () => {
                     src={fotoHotel}
                     alt={hotel}
                     title={hotel}
-                    price={hotel.length > 17 ? 1800 : 2100}
-                    days={hotel.length > 17 ? 8 : 6}
+                    price={hotel.length > 17 ? "R$1800" : "R$2100"}
+                    days={
+                      hotel.length > 17
+                        ? "8 dias de viagem"
+                        : "6 dias de viagem"
+                    }
                   />
                 ))
               ) : (

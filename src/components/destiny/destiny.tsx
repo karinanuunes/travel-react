@@ -4,8 +4,8 @@ interface IDestiny {
   src: string;
   alt: string;
   title: string;
-  price: number;
-  days: number;
+  price: string;
+  days: string;
 }
 
 const Destiny = ({ src, alt, title, price, days }: IDestiny) => {
@@ -14,7 +14,7 @@ const Destiny = ({ src, alt, title, price, days }: IDestiny) => {
       <img src={src} alt={alt} className="card-destiny-img" />
       <div className="card-destiny-title">
         <h4>{title}</h4>
-        <p>R${price}</p>
+        <p>{price}</p>
       </div>
       <p>
         <svg
@@ -25,7 +25,7 @@ const Destiny = ({ src, alt, title, price, days }: IDestiny) => {
         >
           <path d="M0 9l24-9-8.986 24-3.014-12z" />
         </svg>
-        {days} dias de viagem
+        {days}
       </p>
     </div>
   );

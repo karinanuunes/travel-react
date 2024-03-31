@@ -14,22 +14,22 @@ const Destination = () => {
           src={franca}
           alt="França"
           title="Paris, França"
-          price={10000}
-          days={6}
+          price="R$10000"
+          days="6 dias de viagem"
         />
         <Destiny
           src={grecia}
           alt="Grécia"
           title="Atenas, Grécia"
-          price={21800}
-          days={14}
+          price="R$21800"
+          days="14 dias de viagem"
         />
         <Destiny
           src={italia}
           alt="Itália"
           title="Pisa, Itália"
-          price={15800}
-          days={7}
+          price="R$15800"
+          days="7 dias de viagem"
         />
       </div>
     </section>
