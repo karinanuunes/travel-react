@@ -72,8 +72,8 @@ const Book = () => {
           src={eua}
           alt="Estados Unidos"
           title="Estados Unidos"
-          price={6000}
-          days={7}
+          price="R$6000"
+          days="7 dias de viagem"
         />
         <div className="book-complete">
           <img src={japao} alt="" className="book-complete-img" />
