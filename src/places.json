@@ -4,21 +4,13 @@
     "pais": "Alemanha",
     "capital": "Berlim",
     "cidades": ["Munique", "Frankfurt", "Hamburgo", "Berlim", "Dortmund"],
-    "hoteis": {
-      "Munique": ["Meininger Hotel", "Holiday Inn Munich", "Hotel Munich City"],
-      "Frankfurt": [
-        "Grand Hotel Downtown",
-        "Bristol Hotel Frankfurt",
-        "Hilton Garden Inn"
-      ],
-      "Hamburgo": [
-        "Hotel Stella Maris",
-        "Novum Hotel Graf Moltke",
-        "Fairmont Hotel Vier"
-      ],
-      "Berlim": ["Meininger Hotel", "Titanic Comfortt Mittle", "B&B Hotel"],
-      "Dortmund": ["Hotel Unique", "Mercure Hotel", "B&B Hotel"]
-    }
+    "hoteis": [
+      ["Meininger Hotel", "Holiday Inn Munich", "Hotel Munich City"],
+      ["Grand Hotel Downtown", "Bristol Hotel Frankfurt", "Hilton Garden Inn"],
+      ["Hotel Stella Maris", "Novum Hotel Graf Moltke", "Fairmont Hotel Vier"],
+      ["Meininger Hotel", "Titanic Comfortt Mittle", "B&B Hotel"],
+      ["Hotel Unique", "Mercure Hotel", "B&B Hotel"]
+    ]
   },
   {
     "id": 2,
@@ -31,28 +23,16 @@
       "Bahia",
       "Pernambuco"
     ],
-    "hoteis": {
-      "Rio de Janeiro": [
+    "hoteis": [
+      [
         "Hotel Atlântico Business",
         "Hotel Américas Granada",
         "Copacabana Palace"
       ],
-      "São Paulo": [
-        "Hotel San Raphael",
-        "Hotel Ibis Budget",
-        "Hotel América do Sul"
-      ],
-      "Amazonas": [
-        "Amazonas Palace Hotel",
-        "Amazonia Exxperience",
-        "Juma Amazon Lodge"
-      ],
-      "Bahia": [
-        "Grimmus Pousada",
-        "Tonoromba Resort",
-        "Gran Hotel Stella Maris"
-      ],
-      "Pernambuco": ["Hotel Amoaras", "Hotel Village", "Rede Andrade Ondamar"]
-    }
+      ["Hotel San Raphael", "Hotel Ibis Budget", "Hotel América do Sul"],
+      ["Amazonas Palace Hotel", "Amazonia Exxperience", "Juma Amazon Lodge"],
+      ["Grimmus Pousada", "Tonoromba Resort", "Gran Hotel Stella Maris"],
+      ["Hotel Amoaras", "Hotel Village", "Rede Andrade Ondamar"]
+    ]
   }
 ]

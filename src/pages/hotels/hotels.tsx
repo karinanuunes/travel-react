@@ -24,14 +24,14 @@ const Hotels = () => {
 
   const onSubmit = () => {
     event?.preventDefault();
-    const hoteisEncontrados: string[] = [];
+
     places.forEach((place) => {
       if (place.cidades.includes(cidadeSelecionada)) {
-        const hoteisCidadeSelecionada = place.hoteis[cidadeSelecionada];
-        hoteisEncontrados.push(...hoteisCidadeSelecionada);
+        const indexCidade = place.cidades.indexOf(cidadeSelecionada);
+        const hoteisCidadeSelecionada = place.hoteis[indexCidade];
+        setHoteisSelecionados(hoteisCidadeSelecionada);
       }
     });
-    setHoteisSelecionados(hoteisEncontrados);
   };
 
   return (
