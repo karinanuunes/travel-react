@@ -1,0 +1,9 @@
+.destinations {
+  width: 1060px;
+}
+
+.destination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
