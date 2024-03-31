@@ -4,6 +4,7 @@ import places from "../../places.json";
 import { useState } from "react";
 import Destiny from "../../components/destiny/destiny";
 import fotoHotel from "../../../public/hotel.jpg";
+import Footer from "../../components/footer/footer";
 
 const Hotels = () => {
   const [paisSelecionado, setPais] = useState("");
@@ -35,65 +36,70 @@ const Hotels = () => {
   };
 
   return (
-    <div className="hotel">
-      <Nav />
-      <div className="hoteis">
-        <h1>Hotéis, pousadas e resorts</h1>
-        <div className="area-hoteis">
-          <form onSubmit={onSubmit} className="area-form">
-            <select
-              name="pais"
-              id="pais"
-              className="hotel-input"
-              onChange={handlePais}
-            >
-              <option value="pais">Selecione o país de destino</option>
-              {places.map((place) => (
-                <option key={place.id} value={place.pais}>
-                  {place.pais}
-                </option>
-              ))}
-            </select>
-            <select
-              name="cidade"
-              id="cidade"
-              className="hotel-input"
-              onChange={handleCidade}
-            >
-              <option value="cidade">Selecione a cidade de destino</option>
-              {paisSelecionado &&
-                places
-                  .find((place) => place.pais === paisSelecionado)
-                  ?.cidades.map((cidade, index) => (
-                    <option key={index} value={cidade}>
-                      {cidade}
-                    </option>
-                  ))}
-            </select>
-            <button
-              type="submit"
-              // value="Buscar hotéis"
-              className="classic-button hero-button"
-              // onSubmit={onSubmit}
-            >
-              Buscar Hotéis
-            </button>
-          </form>
-          <div className="area-escolha-hotel">
-            {hoteisSelecionados.map((hotel, index) => (
-              <Destiny
-                key={index}
-                src={fotoHotel}
-                alt={hotel}
-                title={hotel}
-                price={2000}
-                days={6}
-              />
-            ))}
+    <>
+      <div className="hotel">
+        <Nav />
+        <div className="hoteis">
+          <h1>Hotéis, pousadas e resorts</h1>
+          <div className="area-hoteis">
+            <form onSubmit={onSubmit} className="area-form">
+              <select
+                name="pais"
+                id="pais"
+                className="hotel-input"
+                onChange={handlePais}
+              >
+                <option value="pais">País</option>
+                {places.map((place) => (
+                  <option key={place.id} value={place.pais}>
+                    {place.pais}
+                  </option>
+                ))}
+              </select>
+              <select
+                name="cidade"
+                id="cidade"
+                className="hotel-input"
+                onChange={handleCidade}
+              >
+                <option value="cidade">Cidade</option>
+                {paisSelecionado &&
+                  places
+                    .find((place) => place.pais === paisSelecionado)
+                    ?.cidades.map((cidade, index) => (
+                      <option key={index} value={cidade}>
+                        {cidade}
+                      </option>
+                    ))}
+              </select>
+              <button type="submit" className="classic-button hero-button">
+                Buscar Hotéis
+              </button>
+            </form>
+            <div className="area-escolha-hotel">
+              {hoteisSelecionados.length > 0 ? (
+                hoteisSelecionados.map((hotel, index) => (
+                  <Destiny
+                    key={index}
+                    src={fotoHotel}
+                    alt={hotel}
+                    title={hotel}
+                    price={2000}
+                    days={6}
+                  />
+                ))
+              ) : (
+                <h3>
+                  Por favor, selecione o destino da sua viagem para encontrar os
+                  melhores hotéis, pousadas e resorts disponíveis.
+                </h3>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
