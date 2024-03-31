@@ -74,3 +74,14 @@ a:hover:after {
   transform: scale(1.02);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.white-button {
+  color: #ffffff;
+}
+.white-button:after {
+  background-color: #ffffff;
+}
+
+.white-button:hover:after {
+  transform: scaleX(0);
+}

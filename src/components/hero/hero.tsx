@@ -1,5 +1,6 @@
 import Nav from "../nav/nav";
 import "./hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -17,9 +18,11 @@ const Hero = () => {
           </p>
           <div className="hero-destiny">
             <button className="classic-button hero-button">
-              Descubra novos destinos
+              <Link to={"/destinos"} className="white-button">
+                Descubra novos destinos
+              </Link>
             </button>
-            <a href="/">Vá direto ao ponto</a>
+            <Link to={"/"}>Vá direto ao ponto</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
