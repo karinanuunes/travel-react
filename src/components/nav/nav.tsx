@@ -5,7 +5,9 @@ const Nav = () => {
     <nav>
       <div className="nav-bar">
         <div className="nav-heading">
-          <h2>Exploratio</h2>
+          <a href="/">
+            <h2>Exploratio</h2>
+          </a>
         </div>
         <div className="nav-links">
           <a href="/">Destinos</a>
