@@ -1,5 +1,5 @@
 .card-destiny {
-  /* width: 220px; */
+  max-width: 280px;
   border-radius: 8px;
   box-shadow: 0 2px 2px #00000033;
   padding: 0 0 20px 0;
