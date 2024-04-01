@@ -1,0 +1,45 @@
+.login {
+  max-width: 1060px;
+}
+
+.login-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+}
+
+.user-input-area {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #181e4b;
+}
+
+.user-input {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ffffff;
+  outline: none;
+}
+
+.user-input:hover {
+  outline: none;
+}
+
+.login-submit {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.login-submit input {
+  width: 100%;
+}
