@@ -26,7 +26,7 @@ const Login = () => {
       setShowError(false);
       console.log("Login realizado com sucesso");
       alert("Login realizado com sucesso");
-      navigate("/destinos");
+      navigate("/painel");
     } else {
       setShowError(true);
       console.log("Falha no login.");

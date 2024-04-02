@@ -1,0 +1,43 @@
+.painel {
+  width: 1060px;
+}
+
+.painel-header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0 10px;
+  margin: 4px 0 16px 0;
+}
+
+.painel-tabela {
+  margin: 50px 0;
+  border: 1px solid #181e4b10;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+th,
+td {
+  padding: 24px 10px;
+}
+
+tr {
+  border-bottom: 1px solid #181e4b10;
+}
+
+.painel-controle {
+  max-width: 1060px;
+  padding: 30px;
+  margin: 30px;
+}
+
+.tabela-pags {
+  text-align: end;
+}

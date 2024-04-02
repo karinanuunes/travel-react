@@ -7,6 +7,7 @@ import NoPage from "./pages/nopage/nopage";
 import Destinations from "./pages/destinations/destinations";
 import Login from "./pages/login/login";
 import Signin from "./pages/signin/signin";
+import Panel from "./pages/panel/panel";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/hoteis" element={<Hotels />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registrar" element={<Signin />} />
+        <Route path="/painel" element={<Panel />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
