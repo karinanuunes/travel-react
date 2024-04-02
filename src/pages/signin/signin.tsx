@@ -1,39 +1,66 @@
-import "./login.css";
+import "./signin.css";
 import Nav from "../../components/nav/nav";
 import Footer from "../../components/footer/footer";
 import { useState } from "react";
 import useInfo from "../../store/users";
 import { useNavigate } from "react-router-dom";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
-const Login = () => {
+interface Login {
+  email: string;
+  password: string;
+}
+
+const schema = yup.object({
+  email: yup
+    .string()
+    .email("Por favor, insira um e-mail válido.")
+    .required("O e-mail é obrigatório."),
+  password: yup
+    .string()
+    .min(6, "A senha deve conter no mínimo 6 caracteres.")
+    .max(12, "A senha deve conter no máximo 12 caracteres.")
+    .required("A senha é obrigatória."),
+});
+
+const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useInfo();
-  const [showError, setShowError] = useState(false);
+  const { signin } = useInfo();
   const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Login>({ resolver: yupResolver(schema) });
 
-  const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const authenticated = await login(email, password);
-
-    if (authenticated) {
-      setShowError(false);
-      console.log("Login realizado com sucesso");
-      alert("Login realizado com sucesso");
-      navigate("/destinos");
-    } else {
-      setShowError(true);
-      console.log("Falha no login.");
+  const onSubmit = async (data: Login) => {
+    try {
+      await schema.validate(data);
+      console.log("Dados válidos. Iniciando login...");
+      const signinProcess = await signin(data.email, data.password);
+      if (data.email && data.password) {
+        console.log(signinProcess);
+        console.log("Email: " + email + ", Senha: " + password);
+        alert("Usuário cadastrado com sucesso, avance com o login");
+        navigate("/login");
+      }
+    } catch (error) {
+      console.error(error);
     }
   };
 
   return (
-    <div className="login">
+    <div className="signin">
       <Nav />
-      <div className="login-user">
-        <h2>Entre em sua conta</h2>
-        <form onSubmit={handleLogin}>
+      <div className="signin-user">
+        <h2>Área de cadastro</h2>
+        <h4>Fique por dentro de nossos pacotes e promoções imperdíveis.</h4>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label htmlFor="">E-mail</label>
           <div className="user-input-area">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,11 +73,18 @@ const Login = () => {
             <input
               type="text"
               className="user-input"
-              placeholder="Usuário"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              placeholder="exemplo@email.com"
+              {...register("email", {
+                onChange: (e) => setEmail(e.target.value),
+              })}
             />
           </div>
+          {errors.email ? (
+            <small className="error-msg">{errors.email.message}</small>
+          ) : (
+            <></>
+          )}
+          <label htmlFor="password">Senha</label>
           <div className="user-input-area">
             {showPassword ? (
               <svg
@@ -75,9 +109,10 @@ const Login = () => {
             <input
               type={showPassword ? "text" : "password"}
               className="user-input"
-              placeholder="Senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              placeholder="******"
+              {...register("password", {
+                onChange: (e) => setPassword(e.target.value),
+              })}
             />
             <div className="show-password">
               <label onClick={() => setShowPassword(!showPassword)}>
@@ -103,17 +138,14 @@ const Login = () => {
               </label>
             </div>
           </div>
-          {showError ? (
-            <div className="error-msg">
-              <small>Usuário ou senha inválidos.</small>
-            </div>
-          ) : (
-            <small></small>
+          {errors.password && (
+            <small className="error-msg">{errors.password.message}</small>
           )}
-          <div className="login-submit">
+
+          <div className="signin-submit">
             <input
               type="submit"
-              value="Entrar"
+              value="Cadastrar"
               className="hero-button classic-button"
             />
           </div>
@@ -124,4 +156,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signin;

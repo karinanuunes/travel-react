@@ -1,8 +1,8 @@
-.login {
+.signin {
   max-width: 1060px;
 }
 
-.login-user {
+.signin-user {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,34 +13,21 @@
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  /* gap: 10px; */
   margin: 20px;
 }
 
 .user-input-area {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #181e4b;
+  margin-bottom: 10px;
 }
 
-.user-input {
-  width: 300px;
-  padding: 10px 15px;
-  border: 1px solid #ffffff;
-  outline: none;
-}
-
-.user-input:hover {
-  outline: none;
-}
-
-.login-submit {
+.signin-submit {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
 
-.login-submit input {
+.signin-submit input {
   width: 100%;
 }
 

@@ -1,7 +1,12 @@
 import "./nav.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  const navigate = useNavigate();
+  const registrar = () => {
+    navigate("/registrar");
+  };
+
   return (
     <nav>
       <div className="nav-bar">
@@ -16,7 +21,9 @@ const Nav = () => {
           <Link to={"/"}>Voôs</Link>
           <Link to={"/"}>Bookings</Link>
           <Link to={"/login"}>Entrar</Link>
-          <button className="classic-button">Registre-se</button>
+          <button className="classic-button" onClick={registrar}>
+            Registre-se
+          </button>
         </div>
       </div>
     </nav>
