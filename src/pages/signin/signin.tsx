@@ -4,7 +4,7 @@ import Footer from "../../components/footer/footer";
 import { useState } from "react";
 import useInfo from "../../store/users";
 import { useNavigate } from "react-router-dom";
-import * as yup from "yup";
+import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
@@ -13,13 +13,11 @@ interface Login {
   password: string;
 }
 
-const schema = yup.object({
-  email: yup
-    .string()
+const schema = Yup.object({
+  email: Yup.string()
     .email("Por favor, insira um e-mail válido.")
     .required("O e-mail é obrigatório."),
-  password: yup
-    .string()
+  password: Yup.string()
     .min(6, "A senha deve conter no mínimo 6 caracteres.")
     .max(12, "A senha deve conter no máximo 12 caracteres.")
     .required("A senha é obrigatória."),
