@@ -1,4 +1,5 @@
 import "./destiny.css";
+import pointer from "../../assets/pointer.svg";
 
 interface IDestiny {
   src: string;
@@ -17,14 +18,7 @@ const Destiny = ({ src, alt, title, price, days }: IDestiny) => {
         <p>{price}</p>
       </div>
       <p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-        >
-          <path d="M0 9l24-9-8.986 24-3.014-12z" />
-        </svg>
+        <img src={pointer} alt="Ponteiro de localização" />
         {days}
       </p>
     </div>
