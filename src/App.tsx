@@ -8,6 +8,7 @@ import Destinations from "./pages/destinations/destinations";
 import Login from "./pages/login/login";
 import Signin from "./pages/signin/signin";
 import Panel from "./pages/panel/panel";
+import Flights from "./pages/flights/flights";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/destinos" element={<Destinations />} />
         <Route path="/hoteis" element={<Hotels />} />
+        <Route path="/voos" element={<Flights />} />
+        <Route path="/bookings" element={<NoPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registrar" element={<Signin />} />
         <Route path="/painel" element={<Panel />} />

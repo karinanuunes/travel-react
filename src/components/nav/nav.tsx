@@ -18,8 +18,8 @@ const Nav = () => {
         <div className="nav-links">
           <Link to={"/destinos"}>Destinos</Link>
           <Link to={"/hoteis"}>Hotéis</Link>
-          <Link to={"/"}>Voôs</Link>
-          <Link to={"/"}>Bookings</Link>
+          <Link to={"/voos"}>Voôs</Link>
+          <Link to={"/bookings"}>Bookings</Link>
           <Link to={"/login"}>Entrar</Link>
           <button className="classic-button" onClick={registrar}>
             Registre-se
