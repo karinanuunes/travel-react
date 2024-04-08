@@ -23,7 +23,6 @@
 .hero-title {
   font-size: 60px;
   font-weight: 800;
-  /* background-image: url("https://img.freepik.com/fotos-premium/curso-de-tinta-vermelha-brilhante_23-2147746838.jpg?w=360"); */
   background-repeat: no-repeat;
 }
 
@@ -41,11 +40,15 @@
 }
 
 @media (max-width: 950px) {
+  .description {
+    padding: 0;
+  }
+
   .hero-content {
     justify-content: center;
   }
 
-  .hero-content img {
+  .hero-image {
     display: none;
   }
 }
