@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         <div className="footer-mais">
           <h3>Mais</h3>
-          <a href="/">Companhias aéreas</a>
+          <a href="/">Companhias</a>
           <a href="/">Hotéis</a>
           <a href="/">Pacotes</a>
         </div>

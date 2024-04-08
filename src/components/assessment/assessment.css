@@ -41,11 +41,16 @@
   justify-content: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 610px) {
   .assessment {
     padding: 30px;
   }
+
   .assessment-general .arrow-button {
     margin: 0;
+  }
+
+  .arrow-button {
+    margin: 5px;
   }
 }
