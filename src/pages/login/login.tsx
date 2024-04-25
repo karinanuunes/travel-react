@@ -24,12 +24,10 @@ const Login = () => {
 
     if (authenticated) {
       setShowError(false);
-      console.log("Login realizado com sucesso");
       alert("Login realizado com sucesso");
       navigate("/painel");
     } else {
       setShowError(true);
-      console.log("Falha no login.");
     }
   };
 
@@ -47,6 +45,8 @@ const Login = () => {
               placeholder="Usuário"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              autoComplete="email"
             />
           </div>
           <div className="user-input-area">
@@ -62,9 +62,14 @@ const Login = () => {
               placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              name="password"
+              id="password"
             />
             <div className="show-password">
-              <label onClick={() => setShowPassword(!showPassword)}>
+              <label
+                htmlFor="password"
+                onClick={() => setShowPassword(!showPassword)}
+              >
                 {showPassword ? (
                   <img src={openEye} alt="Olho aberto" />
                 ) : (
@@ -74,11 +79,9 @@ const Login = () => {
             </div>
           </div>
           {showError ? (
-            <div className="error-msg">
-              <small>Usuário ou senha inválidos.</small>
-            </div>
+            <small className="error-msg">Usuário ou senha inválidos.</small>
           ) : (
-            <small></small>
+            ""
           )}
           <div className="login-submit">
             <input

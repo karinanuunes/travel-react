@@ -43,11 +43,11 @@ const Signin = () => {
   const onSubmit = async (data: Login) => {
     try {
       await schema.validate(data);
-      console.log("Dados válidos. Iniciando login...");
-      const signinProcess = await signin(data.email, data.password);
       if (data.email && data.password) {
-        console.log(signinProcess);
-        console.log("Email: " + email + ", Senha: " + password);
+        signin(data.email, data.password);
+        const newUser = { email, password };
+        data.email = newUser.email;
+        data.password = newUser.password;
         alert("Usuário cadastrado com sucesso, avance com o login");
         navigate("/login");
       }
@@ -63,22 +63,24 @@ const Signin = () => {
         <h2>Área de cadastro</h2>
         <h4>Fique por dentro de nossos pacotes e promoções imperdíveis.</h4>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="">E-mail</label>
+          <label htmlFor="email">E-mail</label>
           <div className="user-input-area">
             <img src={user} alt="Usuário" />
             <input
+              id="email"
               type="text"
               className="user-input"
               placeholder="exemplo@email.com"
               {...register("email", {
                 onChange: (e) => setEmail(e.target.value),
               })}
+              autoComplete="email"
             />
           </div>
           {errors.email ? (
             <small className="error-msg">{errors.email.message}</small>
           ) : (
-            <></>
+            ""
           )}
           <label htmlFor="password">Senha</label>
           <div className="user-input-area">
@@ -89,6 +91,7 @@ const Signin = () => {
             )}
 
             <input
+              id="password"
               type={showPassword ? "text" : "password"}
               className="user-input"
               placeholder="******"
@@ -97,7 +100,10 @@ const Signin = () => {
               })}
             />
             <div className="show-password">
-              <label onClick={() => setShowPassword(!showPassword)}>
+              <label
+                htmlFor="password"
+                onClick={() => setShowPassword(!showPassword)}
+              >
                 {showPassword ? (
                   <img src={openEye} alt="Olho aberto" />
                 ) : (

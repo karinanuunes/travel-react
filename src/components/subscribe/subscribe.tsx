@@ -21,6 +21,8 @@ const Subscribe = () => {
             type="text"
             placeholder="Digite seu e-mail aqui"
             className="email-input"
+            name="email"
+            autoComplete="email"
           />
         </div>
         <input
