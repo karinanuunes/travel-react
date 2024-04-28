@@ -1,6 +1,6 @@
 import "./panel.css";
 import Nav from "../../components/nav/nav";
-import userData from "../../data/userdata";
+import userData from "../../utils/usersData";
 import { format } from "date-fns";
 import Footer from "../../components/footer/footer";
 import search from "../../assets/search.svg";

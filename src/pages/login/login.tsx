@@ -2,7 +2,7 @@ import "./login.css";
 import Nav from "../../components/nav/nav";
 import Footer from "../../components/footer/footer";
 import { useState } from "react";
-import useInfo from "../../store/users";
+import useInfo from "../../services/users";
 import { useNavigate } from "react-router-dom";
 import user from "../../assets/user.svg";
 import openPadlock from "../../assets/open-padlock.svg";

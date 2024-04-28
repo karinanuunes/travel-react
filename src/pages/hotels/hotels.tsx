@@ -1,6 +1,6 @@
 import "./hotels.css";
 import Nav from "../../components/nav/nav";
-import places from "../../places.json";
+import places from "./places.json";
 import { useState } from "react";
 import Destiny from "../../components/destiny/destiny";
 import fotoHotel from "../../../public/hotel.jpg";

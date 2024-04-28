@@ -1,7 +1,7 @@
 import "./flights.css";
 import Footer from "../../components/footer/footer";
 import Nav from "../../components/nav/nav";
-import airplaneData from "../../data/airplaneData";
+import airplaneData from "../../utils/airplanesData";
 
 const Flights = () => {
   return (
